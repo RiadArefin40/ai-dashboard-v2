@@ -1,11 +1,6 @@
-import { Geist } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { ThemeProvider } from 'next-themes';
-
-const geist = Geist({
-  subsets: ["latin", "arabic"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -14,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children, params }) {
   return (
-    <html suppressHydrationWarning>
-      <body className={geist.className}>
+    <html suppressHydrationWarning lang="en">
+      <body>
         <ThemeProvider 
           attribute="class" 
           defaultTheme="system" 
